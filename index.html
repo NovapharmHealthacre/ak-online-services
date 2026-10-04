@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070a">
+<title>A K Online Services | Manjalpur, Vadodara</title>
+<meta name="description" content="Professional assistance for citizen services, agriculture, property, business registrations, income tax, financial paperwork, driving licence and utility workflows in Manjalpur, Vadodara.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://www.akonlineservices.in/">
+<meta name="author" content="A K Online Services">
+<meta name="geo.region" content="IN-GJ">
+<meta name="geo.placename" content="Vadodara">
+<meta property="og:url" content="https://www.akonlineservices.in/">
+<meta property="og:site_name" content="A K Online Services">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A K Online Services | Manjalpur, Vadodara">
+<meta name="twitter:description" content="Life runs on paperwork. We make it move.">
+<meta property="og:title" content="A K Online Services">
+<meta property="og:description" content="Life runs on paperwork. We make it move.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="A K Online Services">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#05070a;--ink2:#0a1017;--paper:#f5f5f2;--white:#fff;--text:#11151b;
+  --muted:#6a737e;--line:#d9dde2;--blue:#2f68ff;--blue2:#9bb0ff;--green:#5dd9a5;
+  --navy:#0d1b2e;--max:1340px;--pad:clamp(18px,4vw,60px)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.container{width:min(calc(100% - var(--pad)*2),var(--max));margin:auto}
+.mono{font:500 10px/1.2 "DM Mono",monospace;letter-spacing:.09em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.75,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(5,7,10,.72);backdrop-filter:blur(22px) saturate(150%);border-bottom:1px solid rgba(255,255,255,.08);color:#fff}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:40px;height:40px;background:#fff;color:#07090c;display:grid;place-items:center;font:700 15px Manrope;border-radius:11px;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.mark b{color:var(--blue)}
+.brand-text strong{display:block;font:700 13px Manrope;letter-spacing:-.02em}
+.brand-text span{display:block;color:#8795a4;font:500 8px "DM Mono";letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.navlinks{display:flex;gap:26px;align-items:center;font-size:12px;font-weight:600;color:#c1c9d2}
+.navlinks a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:9px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;padding:0 17px;border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:700;cursor:pointer;transition:.22s}
+.btn-light{background:#fff;color:#071018}.btn-light:hover{transform:translateY(-1px);background:#eef2ff}
+.btn-outline{border-color:rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.02)}.btn-outline:hover{background:rgba(255,255,255,.07)}
+.btn-dark{background:#071018;color:#fff}.btn-dark:hover{background:#131f2c;transform:translateY(-1px)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:#2458de}
+.menu{display:none;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff}
+.mobile{display:none;position:fixed;top:72px;left:0;right:0;z-index:75;background:#080c11;color:#fff;padding:14px var(--pad) 22px;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile.open{display:grid}.mobile a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px;font-weight:700}
+.hero{position:relative;min-height:100svh;padding:145px 0 68px;background:linear-gradient(180deg,#05070a 0%,#09111a 100%);color:#fff;overflow:hidden;display:flex;align-items:center}
+.hero-gridlines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);background-size:68px 68px;mask-image:linear-gradient(#000 0%,#000 55%,transparent 96%)}
+.orb{position:absolute;right:-10%;top:5%;width:min(56vw,780px);aspect-ratio:1;border-radius:50%;background:
+radial-gradient(circle at 35% 32%,rgba(255,255,255,.85),rgba(184,199,255,.48) 12%,rgba(69,111,255,.42) 31%,rgba(30,67,158,.12) 52%,transparent 72%);
+filter:blur(1px);opacity:.72;animation:float 8s ease-in-out infinite}
+.orb:after{content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(255,255,255,.14);box-shadow:0 0 0 56px rgba(255,255,255,.015),0 0 0 112px rgba(255,255,255,.01)}
+@keyframes float{50%{transform:translateY(16px) scale(1.015)}}
+.hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);gap:74px;align-items:end}
+.kicker{display:flex;align-items:center;gap:10px;color:#9ba7b4;margin-bottom:24px}.kicker i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 7px rgba(93,217,165,.08)}
+.hero h1{font:600 clamp(58px,8vw,118px)/.86 Manrope;letter-spacing:-.072em;margin:0;max-width:950px}
+.hero h1 em{font-style:normal;color:var(--blue2)}
+.hero-sub{font-size:18px;line-height:1.7;color:#aeb9c6;max-width:740px;margin:32px 0 0;letter-spacing:-.01em}
+.hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:19px;padding-top:22px;margin-top:42px;border-top:1px solid rgba(255,255,255,.12);font:500 9px "DM Mono";text-transform:uppercase;letter-spacing:.07em;color:#7f8c99}
+.hero-meta span{display:flex;align-items:center;gap:8px}.hero-meta i{width:4px;height:4px;border-radius:50%;background:#5b6875}
+.nav-card{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.035);backdrop-filter:blur(16px);box-shadow:0 38px 90px rgba(0,0,0,.27);overflow:hidden}
+.nav-card-head{height:50px;padding:0 17px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1)}
+.nav-card-head span{font:500 9px "DM Mono";text-transform:uppercase;letter-spacing:.09em;color:#9ca8b5}
+.nav-card-body{padding:20px}.nav-card-title{font:600 27px/1.1 Manrope;letter-spacing:-.04em;margin:0 0 18px}
+.world-links{display:grid;gap:6px}.world-link{display:flex;align-items:center;justify-content:space-between;padding:13px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.025);cursor:pointer;transition:.22s}.world-link:hover{transform:translateX(3px);background:rgba(255,255,255,.075);border-color:rgba(155,176,255,.32)}.world-link b{font-size:12px}.world-link span{color:#778491;font:500 9px "DM Mono"}
+.nav-card-foot{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.1);margin-top:18px}.mini{padding-top:15px}.mini+.mini{padding-left:17px;border-left:1px solid rgba(255,255,255,.1)}.mini strong{display:block;font:600 31px Manrope;letter-spacing:-.04em}.mini span{font:500 8px "DM Mono";text-transform:uppercase;letter-spacing:.08em;color:#7b8794}
+.ribbon{background:#fff;border-bottom:1px solid var(--line);overflow:hidden}.ribbon-track{display:flex;width:max-content;animation:ticker 34s linear infinite}.ribbon span{padding:16px 25px;font:500 9px "DM Mono";letter-spacing:.09em;text-transform:uppercase;color:#39424c}.ribbon span:after{content:"/";margin-left:25px;color:#aab0b7}@keyframes ticker{to{transform:translateX(-50%)}}
+.thesis{padding:125px 0}.thesis-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:82px;align-items:start}.section-label{display:flex;align-items:center;gap:11px;color:#747d87;font:500 10px "DM Mono";text-transform:uppercase;letter-spacing:.08em}.section-label:before{content:"";width:34px;height:1px;background:#a8afb7}.thesis h2{font:600 clamp(48px,6.5vw,88px)/.95 Manrope;letter-spacing:-.06em;margin:0}.thesis h2 span{color:#687483}.thesis-copy{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;max-width:960px}.thesis-copy p{margin:0;color:#626b76;font-size:13px;line-height:1.82}
+.worlds{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:105px 0}.world-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:42px}.world-head h2{font:600 clamp(44px,5.7vw,76px)/.96 Manrope;letter-spacing:-.055em;margin:14px 0 0}.world-head p{max-width:500px;color:#69727d;font-size:13px;line-height:1.72;margin:0}.world-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.world{min-height:315px;border:1px solid var(--line);background:#fafafa;padding:26px;display:flex;flex-direction:column;justify-content:space-between;transition:.24s;cursor:pointer;position:relative;overflow:hidden}.world:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-95px;bottom:-95px;border:1px solid #e5e8ec}.world:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(7,16,24,.08);border-color:#adb7c1}.world.dark{background:#071018;color:#fff;border-color:#071018}.world.navy{background:#0d1b2e;color:#fff;border-color:#0d1b2e}.world.green{background:#0c211a;color:#fff;border-color:#0c211a}.world .code{font:500 9px "DM Mono";letter-spacing:.08em;color:#8a929b}.world.dark .code,.world.navy .code,.world.green .code{color:#7e8d9d}.world h3{font:600 30px/1.02 Manrope;letter-spacing:-.045em;margin:0;max-width:240px}.world p{font-size:11px;line-height:1.67;color:#747c86;max-width:330px}.world.dark p,.world.navy p,.world.green p{color:#9eabb9}.world .open{font-size:11px;font-weight:700;position:relative;z-index:2}
+.directory{padding:106px 0}.directory-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;align-items:end;margin-bottom:30px}.directory h2{font:600 clamp(44px,5.6vw,76px)/.97 Manrope;letter-spacing:-.057em;margin:14px 0 0}.directory-head p{margin:0;color:#68727d;font-size:13px;line-height:1.72}.search-shell{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);padding:14px 16px;margin-bottom:14px}.search-shell span{font:500 10px "DM Mono";color:#9299a1}.search-shell input{border:0;outline:0;background:transparent;flex:1;font-size:14px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:17px}.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer}.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}.service-list{border-top:1px solid var(--line)}.service-row{display:grid;grid-template-columns:78px 1fr 1.15fr 42px;gap:24px;align-items:center;min-height:120px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;cursor:pointer}.service-row:before{content:"";position:absolute;inset:0;background:#071018;transform:translateY(101%);transition:.3s}.service-row>*{position:relative;z-index:1;transition:.24s}.service-row:hover:before{transform:none}.service-row:hover{color:#fff}.service-row:hover .sdesc,.service-row:hover .scode{color:#9ba8b6}.scode{font:500 9px "DM Mono";color:#9299a1}.sname{font:600 27px/1.05 Manrope;letter-spacing:-.04em}.sdesc{font-size:11px;line-height:1.65;color:#737c86}.sarrow{width:38px;height:38px;border:1px solid #d8dde2;border-radius:50%;display:grid;place-items:center}
+.signature{padding:115px 0;background:#08111a;color:#fff;position:relative;overflow:hidden}.signature:after{content:"";position:absolute;width:700px;height:700px;border-radius:50%;right:-360px;top:-120px;border:1px solid rgba(255,255,255,.07);box-shadow:0 0 0 80px rgba(255,255,255,.015),0 0 0 160px rgba(255,255,255,.01)}.signature-grid{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:84px}.signature h2{font:600 clamp(50px,6.5vw,86px)/.94 Manrope;letter-spacing:-.058em;margin:14px 0 20px}.signature h2 span{color:#8fa8ff}.signature p{color:#9eabb8;font-size:13px;line-height:1.78;max-width:590px}.feature-list{border-top:1px solid rgba(255,255,255,.14)}.feature{display:grid;grid-template-columns:68px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.14)}.feature .fcode{font:500 9px "DM Mono";color:#6f7f90}.feature strong{display:block;font:600 22px Manrope;margin-bottom:5px;letter-spacing:-.025em}.feature span{font-size:11px;color:#8e9ca9;line-height:1.62}
+.finance{padding:112px 0;background:#0c1b2f;color:#fff}.finance-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px}.finance h2{font:600 clamp(48px,6.2vw,82px)/.96 Manrope;letter-spacing:-.057em;margin:15px 0 20px}.finance h2 span{color:#9eb3ff}.finance p{font-size:13px;line-height:1.76;color:#a4b1c3;max-width:590px}.finance-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px}.fcard{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);padding:21px;min-height:180px}.fcard .mono{color:#7588a7}.fcard strong{display:block;font:600 20px/1.1 Manrope;letter-spacing:-.025em;margin:27px 0 8px}.fcard span{font-size:11px;line-height:1.62;color:#9eacc0}
+.process{padding:110px 0;background:#e9e9e5}.process-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}.process h2{font:600 clamp(46px,5.8vw,78px)/.96 Manrope;letter-spacing:-.055em;margin:14px 0 0}.steps{border-top:1px solid #c5c9ce}.step{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid #c5c9ce}.step .num{font:500 9px "DM Mono";color:#848c94}.step strong{display:block;font:600 21px Manrope;margin-bottom:5px}.step span{font-size:11px;line-height:1.65;color:#69727b}
+.trust{padding:112px 0}.trust-grid{display:grid;grid-template-columns:1.22fr .78fr;gap:82px;align-items:end}.trust h2{font:600 clamp(50px,6.6vw,90px)/.94 Manrope;letter-spacing:-.062em;margin:0}.trust h2 span{color:#697582}.trust-side{border-left:1px solid #c2c7cc;padding-left:28px}.trust-side p{font-size:13px;line-height:1.78;color:#646d77;margin:13px 0 0}.proof{padding:0 0 108px}.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d0d4d8;border:1px solid #d0d4d8}.proof-card{background:var(--paper);min-height:275px;padding:29px;display:flex;flex-direction:column;justify-content:space-between}.proof-card.dark{background:#071018;color:#fff}.proof-card strong{font:600 71px/.9 Manrope;letter-spacing:-.06em}.proof-card p{font-size:11px;line-height:1.65;color:#6d7680;margin:14px 0 0}.proof-card.dark p{color:#98a6b5}
+.contact{background:#fff;border-top:1px solid var(--line);padding:106px 0}.contact-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:16px}.contact-panel{background:#071018;color:#fff;padding:36px;min-height:570px;display:flex;flex-direction:column;justify-content:space-between}.contact-panel h2{font:600 55px/1 Manrope;letter-spacing:-.058em;margin:14px 0 19px}.contact-panel p{font-size:13px;line-height:1.72;color:#9aa9b8}.details{border-top:1px solid rgba(255,255,255,.14)}.detail{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14)}.detail span{display:block;font:500 8px "DM Mono";letter-spacing:.08em;text-transform:uppercase;color:#768798;margin-bottom:6px}.detail strong{font-size:13px}.form{border:1px solid var(--line);padding:36px}.form h3{font:600 30px Manrope;letter-spacing:-.04em;margin:0 0 7px}.form>p{font-size:12px;line-height:1.65;color:#6b747e;margin:0 0 25px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:10px;font-weight:700;color:#5e6872}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--line);background:#fafafa;outline:0}.field textarea{min-height:116px;resize:vertical}.form .btn{width:100%;margin-top:13px}.safe{font-size:9px!important;color:#9098a0!important;margin-top:10px!important}
+footer{background:#05070a;color:#fff;padding:45px 0 30px}.foot-top{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.12)}.foot-brand{font:600 34px Manrope;letter-spacing:-.04em}.foot-brand span{display:block;color:#768596;font:500 9px "DM Mono";text-transform:uppercase;letter-spacing:.08em;margin-top:9px}.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;font-size:11px;color:#a8b4bf}.foot-note{padding-top:21px;max-width:1000px;color:#6f7d8b;font-size:9px;line-height:1.7}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:110;width:min(580px,100%);background:#fff;transform:translateX(102%);transition:.34s cubic-bezier(.2,.8,.2,1);box-shadow:-30px 0 90px rgba(0,0,0,.24);overflow:auto}.drawer.open{transform:none}.drawer-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:18px 23px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.94);backdrop-filter:blur(16px)}.drawer-close{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#fff;cursor:pointer}.drawer-body{padding:31px 27px 45px}.drawer-body h3{font:600 42px/.98 Manrope;letter-spacing:-.05em;margin:15px 0 14px}.drawer-body p,.drawer-body li{font-size:12px;line-height:1.75;color:#68727c}.drawer-body ul{padding-left:18px}.drawer-block{margin-top:29px;padding-top:21px;border-top:1px solid var(--line)}.drawer-block h4{font-size:12px;margin:0 0 12px}
+.overlay{position:fixed;inset:0;z-index:100;background:rgba(5,7,10,.68);backdrop-filter:blur(9px);opacity:0;pointer-events:none;transition:.25s}.overlay.open{opacity:1;pointer-events:auto}
+@media(max-width:1050px){.navlinks{display:none}.menu{display:grid;place-items:center}.nav-right .btn-light{display:none}.hero-layout,.thesis-grid,.directory-head,.signature-grid,.finance-grid,.process-grid,.trust-grid,.contact-grid{grid-template-columns:1fr}.hero{min-height:auto}.nav-card{max-width:660px}.thesis-grid{gap:32px}.world-grid{grid-template-columns:1fr 1fr}.signature-grid,.finance-grid{gap:48px}.contact-grid{gap:12px}}
+@media(max-width:680px){:root{--pad:18px}.nav-inner{height:66px}.mobile{top:66px}.brand-text span{display:none}.hero{padding:118px 0 45px}.orb{width:105vw;right:-55%;top:0;opacity:.56}.hero h1{font-size:56px}.hero-sub{font-size:15px}.hero-actions .btn{width:100%}.hero-meta{flex-direction:column;gap:10px}.hero-meta i{display:none}.thesis{padding:82px 0}.thesis h2{font-size:51px}.thesis-copy{grid-template-columns:1fr;gap:18px}.worlds{padding:78px 0}.world-head{align-items:start;flex-direction:column}.world-grid{grid-template-columns:1fr}.world{min-height:250px}.directory{padding:78px 0}.directory h2{font-size:49px}.service-row{grid-template-columns:42px 1fr 34px;gap:12px;padding:20px 0;min-height:0}.sdesc{grid-column:2/3}.sarrow{grid-column:3;grid-row:1/3;width:34px;height:34px}.sname{font-size:25px}.signature,.finance{padding:82px 0}.signature h2,.finance h2{font-size:53px}.finance-cards{grid-template-columns:1fr}.process{padding:78px 0}.trust{padding:82px 0}.trust h2{font-size:55px}.trust-side{border-left:0;border-top:1px solid #c2c7cc;padding:24px 0 0}.proof{padding-bottom:80px}.proof-grid{grid-template-columns:1fr}.proof-card{min-height:230px}.contact{padding:80px 0}.contact-panel,.form{padding:27px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.foot-top{grid-template-columns:1fr}.foot-links{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://www.akonlineservices.in/#business",
+  "name":"A K Online Services",
+  "url":"https://www.akonlineservices.in/",
+  "telephone":"+91 73838 53535",
+  "description":"Professional assisted digital services for citizen, farmer, property, business, tax and utility workflows in Manjalpur, Vadodara.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Sai Chokdi, Manjalpur",
+    "addressLocality":"Vadodara",
+    "addressRegion":"Gujarat",
+    "postalCode":"390011",
+    "addressCountry":"IN"
+  },
+  "areaServed":{"@type":"City","name":"Vadodara"}
+}
+</script>
+
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top"><div class="mark">A<b>K</b></div><div class="brand-text"><strong>A K Online Services</strong><span>Manjalpur / Vadodara</span></div></a>
+    <div class="navlinks"><a href="#worlds">Services</a><a href="#agriculture">Agriculture</a><a href="#finance">Tax & Finance</a><a href="#trust">Trust</a><a href="#contact">Contact</a></div>
+    <div class="nav-right"><a class="btn btn-light" href="tel:+917383853535">Call the desk</a><button class="menu" id="menu" aria-label="Menu">+</button></div>
+  </div>
+</nav>
+<div class="mobile" id="mobile"><a href="#worlds">Services</a><a href="#agriculture">Agriculture</a><a href="#finance">Tax & Finance</a><a href="#trust">Trust</a><a href="#contact">Contact</a><a href="tel:+917383853535">Call +91 73838 53535</a></div>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-gridlines"></div><div class="orb"></div>
+  <div class="container hero-layout">
+    <div>
+      <div class="kicker mono"><i></i> Sai Chokdi / Manjalpur / Vadodara</div>
+      <h1>Life runs on paperwork.<br><em>We make it move.</em></h1>
+      <p class="hero-sub">Citizen services. Agriculture. Property. Business registrations. Income tax. Financial paperwork. Utilities. One professional local desk to help you understand the route, prepare the file and take the next step.</p>
+      <div class="hero-actions"><a class="btn btn-light" href="#worlds">Explore services -></a><a class="btn btn-outline" href="#contact">Start an enquiry</a></div>
+      <div class="hero-meta"><span><i></i> 5.0 Google rating shown</span><span><i></i> 12 reviews shown</span><span><i></i> Local service desk</span></div>
+    </div>
+    <aside class="nav-card reveal">
+      <div class="nav-card-head"><span>AK / Service Navigator</span><span>Local</span></div>
+      <div class="nav-card-body">
+        <h2 class="nav-card-title">Start with what you<br>need to get done.</h2>
+        <div class="world-links">
+          <div class="world-link" data-world="citizen"><b>Citizen & Identity</b><span>01 -></span></div>
+          <div class="world-link" data-world="farmer"><b>Farmer & Agriculture</b><span>02 -></span></div>
+          <div class="world-link" data-world="property"><b>Property & Revenue</b><span>03 -></span></div>
+          <div class="world-link" data-world="business"><b>Business Registrations</b><span>04 -></span></div>
+          <div class="world-link" data-world="finance"><b>Tax & Financial Services</b><span>05 -></span></div>
+          <div class="world-link" data-world="utility"><b>Utilities</b><span>06 -></span></div>
+        </div>
+        <div class="nav-card-foot"><div class="mini"><strong>6</strong><span>service worlds</span></div><div class="mini"><strong>1</strong><span>local desk</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="ribbon"><div class="ribbon-track">
+<span>Passport</span><span>Aadhaar</span><span>Income Certificate</span><span>Driving Licence</span><span>PM-KISAN</span><span>Property Records</span><span>Udyam MSME</span><span>FSSAI</span><span>Income Tax</span><span>Financial Paperwork</span><span>MGVCL</span>
+<span>Passport</span><span>Aadhaar</span><span>Income Certificate</span><span>Driving Licence</span><span>PM-KISAN</span><span>Property Records</span><span>Udyam MSME</span><span>FSSAI</span><span>Income Tax</span><span>Financial Paperwork</span><span>MGVCL</span>
+</div></div>
+
+<section class="thesis">
+  <div class="container thesis-grid">
+    <div class="section-label reveal">The idea</div>
+    <div>
+      <h2 class="reveal">The internet made services digital.<br><span>It did not make them simple.</span></h2>
+      <div class="thesis-copy reveal">
+        <p>A K Online Services exists in the space between a customer and a complicated administrative workflow. The job is not simply to point at a portal. It is to help identify the right route, prepare the right documents and reduce uncertainty.</p>
+        <p>That is why the brand is structured like a professional services platform rather than a conventional cyber-cafe website: fewer claims, clearer service architecture, stronger trust boundaries and a more deliberate client experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="worlds" id="worlds">
+<div class="container">
+  <div class="world-head"><div><div class="section-label reveal">Six service worlds</div><h2 class="reveal">One desk. Multiple life moments.</h2></div><p class="reveal">The experience is organised around the customer's need, not the government department behind it. Tap a world to open the exact service catalogue.</p></div>
+  <div class="world-grid">
+    <article class="world dark reveal" data-openworld="citizen"><div class="code">01 / CITIZEN</div><div><h3>Citizen & Identity</h3><p>Passport, Aadhaar assistance, PAN, voter services, ration card, certificates, e-Shram, Gazette and driving-licence workflows.</p></div><div class="open">Open service world -></div></article>
+    <article class="world green reveal" data-openworld="farmer"><div class="code">02 / FARMER</div><div><h3>Farmer & Agriculture</h3><p>Farmer registration, PM-KISAN, eKYC, e-Samriddhi, crop insurance, subsidy applications, KCC and helpdesk support.</p></div><div class="open">Open service world -></div></article>
+    <article class="world reveal" data-openworld="property"><div class="code">03 / PROPERTY</div><div><h3>Property & Revenue</h3><p>Property-card and Index-2 workflows, tax, encumbrance, registration coordination and seller-side assistance.</p></div><div class="open">Open service world -></div></article>
+    <article class="world reveal" data-openworld="business"><div class="code">04 / BUSINESS</div><div><h3>Business Registrations</h3><p>Udyam/MSME assistance, FSSAI registration or licensing support and confirmed business-administration workflows.</p></div><div class="open">Open service world -></div></article>
+    <article class="world navy reveal" data-openworld="finance"><div class="code">05 / TAX & FINANCE</div><div><h3>Tax & Financial Services</h3><p>ITR e-filing assistance, tax-document access, refund and e-verification workflows, banking/KYC and financial paperwork.</p></div><div class="open">Open service world -></div></article>
+    <article class="world reveal" data-openworld="utility"><div class="code">06 / UTILITIES</div><div><h3>Utilities</h3><p>MGVCL bill-payment assistance, new connections, name changes and load-change workflows.</p></div><div class="open">Open service world -></div></article>
+  </div>
+</div>
+</section>
+
+<section class="directory" id="directory">
+<div class="container">
+  <div class="directory-head"><div><div class="section-label reveal">Service directory</div><h2 class="reveal">Find the exact task.</h2></div><p class="reveal">Search the portfolio directly. Every item below is phrased as assistance where an authority, bank, tax professional or regulated provider remains responsible for the final decision or regulated advice.</p></div>
+  <div class="search-shell reveal"><span>AK / SEARCH</span><input id="search" placeholder="Try passport, ITR, PM-KISAN, Index-2..."></div>
+  <div class="filters reveal">
+    <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="citizen">Citizen</button><button class="filter" data-filter="farmer">Farmer</button><button class="filter" data-filter="property">Property</button><button class="filter" data-filter="business">Business</button><button class="filter" data-filter="finance">Tax & Finance</button><button class="filter" data-filter="utility">Utilities</button>
+  </div>
+  <div class="service-list" id="serviceList"></div>
+</div>
+</section>
+
+<section class="signature" id="agriculture">
+<div class="container signature-grid">
+  <div><div class="section-label reveal" style="color:#718396">Farmer services</div><h2 class="reveal">A digital helpdesk for <span>agriculture.</span></h2><p class="reveal">Agriculture is one of the most distinctive parts of the service portfolio. A K can help farmers navigate registration, benefits, procurement, crop insurance, subsidy and credit paperwork while making clear that eligibility and sanction remain with the relevant authority or lender.</p></div>
+  <div class="feature-list">
+    <div class="feature reveal"><div class="fcode">A / 01</div><div><strong>Farmer Registration & PM-KISAN</strong><span>Registration, eKYC, correction support and status navigation.</span></div></div>
+    <div class="feature reveal"><div class="fcode">A / 02</div><div><strong>e-Samriddhi & Procurement</strong><span>Registration and document support for applicable procurement workflows.</span></div></div>
+    <div class="feature reveal"><div class="fcode">A / 03</div><div><strong>PMFBY & Subsidies</strong><span>Crop-insurance support, mechanisation subsidy routes and separate PM-KUSUM assistance.</span></div></div>
+    <div class="feature reveal"><div class="fcode">A / 04</div><div><strong>KCC & Farmer Helpdesk</strong><span>Credit-card paperwork, scheme-status checks, market information and record support.</span></div></div>
+  </div>
+</div>
+</section>
+
+<section class="finance" id="finance">
+<div class="container finance-grid">
+  <div><div class="section-label reveal" style="color:#7e91af">Tax & financial services</div><h2 class="reveal">Financial paperwork.<br><span>Made understandable.</span></h2><p class="reveal">The right positioning is administrative and digital assistance: help customers organise documents, navigate the income-tax portal, complete straightforward e-filing steps and prepare financial paperwork, while referring complex tax, legal, investment or credit matters to qualified professionals.</p></div>
+  <div class="finance-cards">
+    <div class="fcard reveal"><div class="mono">TAX / 01</div><strong>ITR e-Filing Assistance</strong><span>Information preparation, portal navigation, filing and basic e-verification support.</span></div>
+    <div class="fcard reveal"><div class="mono">TAX / 02</div><strong>AIS / TIS / 26AS / Form 16</strong><span>Access, download and document-organisation assistance.</span></div>
+    <div class="fcard reveal"><div class="mono">TAX / 03</div><strong>Refund & Filing Status</strong><span>Post-filing status, e-verification and refund-navigation support.</span></div>
+    <div class="fcard reveal"><div class="mono">FIN / 04</div><strong>Financial Paperwork</strong><span>KYC, banking and loan-document administration where permitted.</span></div>
+  </div>
+</div>
+</section>
+
+<section class="process">
+<div class="container process-grid">
+  <div><div class="section-label reveal">Client experience</div><h2 class="reveal">Clarity at every step.</h2></div>
+  <div class="steps">
+    <div class="step reveal"><div class="num">01 / DEFINE</div><div><strong>Tell us the outcome.</strong><span>Start with what you need done, not with the portal name.</span></div></div>
+    <div class="step reveal"><div class="num">02 / PREPARE</div><div><strong>Get the file ready.</strong><span>Organise information, scans and supporting documents before submission.</span></div></div>
+    <div class="step reveal"><div class="num">03 / NAVIGATE</div><div><strong>Complete the digital step.</strong><span>Receive assistance with the applicable online workflow and follow-up.</span></div></div>
+    <div class="step reveal"><div class="num">04 / HANDOFF</div><div><strong>Know who decides next.</strong><span>Government, bank, insurer or regulated professional remains responsible where required.</span></div></div>
+  </div>
+</div>
+</section>
+
+<section class="trust" id="trust">
+<div class="container trust-grid">
+  <h2 class="reveal">Assistance where useful.<br><span>Authority where required.</span></h2>
+  <div class="trust-side reveal"><div class="mono">The trust rule</div><p>A K Online Services can help prepare, navigate and submit digital workflows. Government approvals, passport issuance, Aadhaar-authorised functions, tax opinions, lending decisions, legal services, insurance advice and regulated financial advice remain with the relevant competent authority or qualified professional.</p></div>
+</div>
+</section>
+
+<section class="proof"><div class="container"><div class="proof-grid">
+  <article class="proof-card dark reveal"><div class="mono" style="color:#7f8e9e">Google business profile</div><div><strong>5.0</strong><p>Rating shown in the supplied Google business-profile capture. Re-check the live figure before public launch.</p></div></article>
+  <article class="proof-card reveal"><div class="mono">Reviews shown</div><div><strong>12</strong><p>Useful local social proof. The final site should keep this current rather than hard-code stale numbers indefinitely.</p></div></article>
+  <article class="proof-card reveal"><div class="mono">Positioning</div><div><strong style="font-size:45px">One desk.</strong><p>A coherent six-world architecture is stronger than an undifferentiated "all online services" message.</p></div></article>
+</div></div></section>
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+  <div class="contact-panel reveal"><div><div class="mono" style="color:#738596">A K Online Services</div><h2>Start with what you need done.</h2><p>Call or send a structured enquiry. The first step is to identify the right route, the required documents and whether an authority or regulated professional must complete any part of the process.</p></div><div class="details"><div class="detail"><span>Location</span><strong>Sai Chokdi, Manjalpur, Vadodara</strong></div><div class="detail"><span>Phone</span><strong><a href="tel:+917383853535">+91 73838 53535</a></strong></div></div></div>
+  <div class="form reveal"><h3>Request assistance</h3><p>Prepare a WhatsApp enquiry, then review and send it in WhatsApp. This website does not store your form entries.</p>
+    <form id="form"><div class="fields">
+      <div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div>
+      <div class="field"><label>Mobile</label><input id="phone" inputmode="tel" placeholder="+91"></div>
+      <div class="field full"><label>Service</label><select id="service"><option>Citizen / Identity</option><option>Farmer / Agriculture</option><option>Property / Revenue</option><option>Business Registration</option><option>Income Tax / ITR</option><option>Financial Paperwork</option><option>MGVCL / Utility</option><option>Other Online Service</option></select></div>
+      <div class="field full"><label>What do you need help with?</label><textarea id="message" placeholder="A short description is enough."></textarea></div>
+    </div><button class="btn btn-blue" type="submit">Prepare WhatsApp enquiry -></button><p class="safe">Never send passwords, OTPs, card PINs, CVVs or banking login credentials.</p></form>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container">
+  <div class="foot-top"><div class="foot-brand">A K Online Services<span>Sai Chokdi / Manjalpur / Vadodara</span></div><div class="foot-links"><a href="#worlds">Service worlds</a><a href="#directory">Service directory</a><a href="#agriculture">Farmer services</a><a href="#finance">Tax & Finance</a><a href="#trust">Trust & scope</a><a href="#contact">Contact</a></div></div>
+  <div class="foot-note">A K Online Services is an independent assistance business, not a government department, bank, lender, chartered-accountancy firm, law firm, insurer or investment adviser. Government decisions, regulated advice, tax opinions, lending decisions, Aadhaar-authorised activities and official issuance remain with the relevant authority or qualified professional. Confirm service availability, fees and any required authorisation with the desk before proceeding.</div>
+</div></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><span class="mono" id="dcode">AK / SERVICE WORLD</span><button class="drawer-close" id="close">x</button></div>
+  <div class="drawer-body"><div class="mono" id="dcat"></div><h3 id="dtitle"></h3><p id="dintro"></p><div class="drawer-block"><h4>Services in this area</h4><ul id="dlist"></ul></div><div class="drawer-block"><h4>Important boundary</h4><p id="dboundary"></p></div><div class="drawer-block"><a class="btn btn-dark" href="#contact" id="denquire">Start an enquiry -></a></div></div>
+</aside>
+
+<script>
+const worlds={
+citizen:{code:"01 / CITIZEN & IDENTITY",title:"Citizen & Identity",intro:"Everyday identity, certificate and mobility workflows brought into one clear service world.",items:["PAN application & correction assistance","Voter ID / electoral-service assistance","Ration card update support","Birth certificate support","Death certificate support","e-Shram registration","Gazette notification assistance","Aadhaar-related assistance","New / reissue / lost or damaged / Tatkaal passport assistance","Income Certificate assistance","Domicile Certificate assistance","Caste Certificate assistance","EWS Certificate assistance","Learner's Licence / Driving Licence assistance","DL renewal / duplicate / name / mobile / address-change support"],boundary:"A K provides administrative and digital assistance. Issuance, verification and official decisions remain with the relevant government authority. Aadhaar-centre claims should only be used if current authorisation is documented."},
+farmer:{code:"02 / FARMER & AGRICULTURE",title:"Farmer & Agriculture",intro:"A practical digital helpdesk for farmer registration, benefit, procurement, insurance and credit workflows.",items:["Farmer registration","PM-KISAN registration and eKYC support","Bank / Aadhaar correction support for PM-KISAN workflows","e-Samriddhi registration support","eKisanSetu / digital agriculture support","PMFBY crop-insurance assistance","Agricultural mechanisation subsidy applications","PM-KUSUM solar-pump application assistance","Kisan Credit Card paperwork","APMC / market-price navigation","Farmer scheme status and document helpdesk"],boundary:"Eligibility, procurement, insurance acceptance, subsidy sanction and credit approval remain with the relevant authority, insurer or lender."},
+property:{code:"03 / PROPERTY & REVENUE",title:"Property & Revenue",intro:"Property-record and transaction administration, organised around the customer's next step.",items:["Property sales support","Seller-side coordination","Property Card assistance","Index-2 copy / record assistance","Property tax payment support","Sale Deed / registration coordination","Encumbrance Certificate workflow assistance"],boundary:"Legal drafting, title opinions and regulated property-agency activity should only be provided or marketed where the applicable professional and registration requirements are satisfied."},
+business:{code:"04 / BUSINESS REGISTRATIONS",title:"Business Registrations",intro:"Digital assistance for small-business registration and licensing workflows.",items:["Udyam / MSME registration assistance","FSSAI registration / licence assistance","Document-readiness support","Portal navigation and submission assistance"],boundary:"Official Udyam registration itself is free. Any charge should be clearly described as an optional assistance fee. Licensing decisions remain with the competent authority."},
+finance:{code:"05 / TAX & FINANCIAL SERVICES",title:"Tax & Financial Services",intro:"Administrative and digital assistance for income-tax and financial paperwork, with specialist matters referred where required.",items:["ITR e-filing assistance","Form 16 document organisation","Form 26AS access support","AIS / TIS navigation","ITR e-verification assistance","Income-tax refund and filing-status navigation","KYC document preparation","Banking-form assistance","Loan-application paperwork assistance","Kisan Credit Card paperwork"],boundary:"A K is not presented as a CA firm, bank, lender, investment adviser, insurance intermediary or financial adviser. Complex tax positions, tax planning, regulated advice and credit decisions should be handled by the appropriate qualified professional or authorised provider."},
+utility:{code:"06 / UTILITIES",title:"Utilities",intro:"Assistance with common MGVCL consumer-account workflows.",items:["MGVCL bill-payment assistance","New MGVCL connection workflow","MGVCL name-change assistance","MGVCL load-change assistance"],boundary:"MGVCL remains the electricity utility and is responsible for account, connection and service decisions."}
+};
+const serviceRows=[
+["C01","citizen","PAN Assistance","Application and correction workflow support through the appropriate authorised route."],
+["C02","citizen","Voter Services","Registration, correction, address-change and status-navigation assistance."],
+["C03","citizen","Citizen Records","Ration card, birth/death certificate, e-Shram and Gazette-related support."],
+["C04","citizen","Aadhaar Assistance","Guidance for eligible Aadhaar workflows and centre-dependent services where authorised."],
+["C05","citizen","Passport Assistance","Fresh, reissue, lost/damaged, Tatkaal and eligible change workflows."],
+["C06","citizen","Government Certificates","Income, Domicile, Caste and EWS certificate application assistance."],
+["C07","citizen","Driving Licence Assistance","Learner's Licence, new DL, renewal, duplicate and eligible detail-change workflows."],
+["A01","farmer","Farmer Registration & PM-KISAN","Registration, eKYC, correction-support and scheme-status navigation."],
+["A02","farmer","e-Samriddhi Support","Registration and document support for applicable procurement workflows."],
+["A03","farmer","Crop Insurance Assistance","PMFBY application and document-support workflows."],
+["A04","farmer","Subsidy Applications","Mechanisation subsidy routes and separate PM-KUSUM solar-pump assistance."],
+["A05","farmer","Kisan Credit Card Support","Document preparation and application assistance for KCC workflows."],
+["A06","farmer","Farmer Helpdesk","Scheme status, market-price navigation and digital agriculture support."],
+["P01","property","Property Sales Support","Seller-side administrative and transaction-coordination support."],
+["P02","property","Property Records","Property Card and Index-2 copy / record workflows."],
+["P03","property","Registration & Encumbrance","Property tax, sale-deed coordination and encumbrance workflows."],
+["B01","business","Udyam / MSME Assistance","Optional digital support for the official Udyam registration workflow."],
+["B02","business","FSSAI Assistance","Document and portal support for applicable registration or licensing workflows."],
+["T01","finance","Income Tax Return Assistance","ITR information preparation, e-filing navigation and basic e-verification support."],
+["T02","finance","Tax Document Support","Form 16, Form 26AS and AIS/TIS access and organisation."],
+["T03","finance","Tax Status & e-Verification","Refund-status, filing-status and e-verification navigation."],
+["F01","finance","Financial Paperwork Assistance","KYC, banking and loan-application paperwork where assisted submission is permitted."],
+["U01","utility","MGVCL Billing Assistance","Bill-payment and consumer-account workflow assistance."],
+["U02","utility","MGVCL Consumer Services","New connection, name-change and load-change workflow assistance."]
+];
+
+const menu=document.getElementById("menu"),mobile=document.getElementById("mobile");menu.onclick=()=>mobile.classList.toggle("open");mobile.querySelectorAll("a").forEach(a=>a.onclick=()=>mobile.classList.remove("open"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+
+const serviceList=document.getElementById("serviceList"),search=document.getElementById("search"),filters=[...document.querySelectorAll(".filter")];let filter="all";
+function render(){
+  const q=search.value.trim().toLowerCase();
+  const rows=serviceRows.filter(r=>(filter==="all"||r[1]===filter)&&(!q||r.join(" ").toLowerCase().includes(q)));
+  serviceList.innerHTML=rows.map(r=>`<div class="service-row" data-rowworld="${r[1]}"><div class="scode">${r[0]}</div><div class="sname">${r[2]}</div><div class="sdesc">${r[3]}</div><div class="sarrow">-></div></div>`).join("")||`<div style="padding:30px 0;color:#777;font-size:12px">No exact match. Call the desk for other available services.</div>`;
+  serviceList.querySelectorAll("[data-rowworld]").forEach(el=>el.onclick=()=>openWorld(el.dataset.rowworld));
+}
+filters.forEach(b=>b.onclick=()=>{filters.forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()});search.oninput=render;render();
+
+const drawer=document.getElementById("drawer"),overlay=document.getElementById("overlay"),close=document.getElementById("close"),dcode=document.getElementById("dcode"),dcat=document.getElementById("dcat"),dtitle=document.getElementById("dtitle"),dintro=document.getElementById("dintro"),dlist=document.getElementById("dlist"),dboundary=document.getElementById("dboundary");
+function openWorld(key){const w=worlds[key];if(!w)return;dcode.textContent=w.code;dcat.textContent="AK / SERVICE WORLD";dtitle.textContent=w.title;dintro.textContent=w.intro;dlist.innerHTML=w.items.map(x=>`<li>${x}</li>`).join("");dboundary.textContent=w.boundary;drawer.classList.add("open");overlay.classList.add("open");drawer.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function shut(){drawer.classList.remove("open");overlay.classList.remove("open");drawer.setAttribute("aria-hidden","true");document.body.style.overflow=""}
+close.onclick=shut;overlay.onclick=shut;document.getElementById("denquire").onclick=shut;addEventListener("keydown",e=>{if(e.key==="Escape")shut()});
+document.querySelectorAll("[data-openworld],[data-world]").forEach(e=>e.onclick=()=>openWorld(e.dataset.openworld||e.dataset.world));
+
+document.getElementById("form").onsubmit=e=>{e.preventDefault();const n=document.getElementById("name").value.trim(),p=document.getElementById("phone").value.trim(),s=document.getElementById("service").value,m=document.getElementById("message").value.trim();const t=`Hello A K Online Services,%0A%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p||"Not provided")}%0AService: ${encodeURIComponent(s)}%0ARequest: ${encodeURIComponent(m||"Please contact me about this service.")}%0A%0ASent from www.akonlineservices.in.`;window.open(`https://wa.me/917383853535?text=${t}`,"_blank","noopener")};
+</script>
+</body>
+</html>
