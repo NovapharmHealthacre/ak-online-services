@@ -20,3 +20,16 @@ document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=
 applyLang(localStorage.getItem('ak-lang')||'en');
 const form=document.querySelector('#enquiryForm');
 if(form){form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const text='Hello A K Online Services,%0A%0AName: '+encodeURIComponent(d.get('name')||'')+'%0AMobile: '+encodeURIComponent(d.get('phone')||'')+'%0AService: '+encodeURIComponent(d.get('service')||'')+'%0ARequest: '+encodeURIComponent(d.get('message')||'Please contact me about this service.')+'%0A%0ASent from akonlineservices.in';window.open('https://wa.me/917383853535?text='+text,'_blank','noopener');});}
+function syncLangA11y(lang){
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    const active=btn.dataset.lang===lang;
+    btn.setAttribute('aria-pressed',String(active));
+    btn.setAttribute('aria-label',btn.dataset.lang==='gu'?'ગુજરાતી ભાષા પસંદ કરો':'Select English language');
+  });
+}
+const originalApplyLang=applyLang;
+applyLang=function(lang){
+  originalApplyLang(lang);
+  syncLangA11y(lang==='gu'?'gu':'en');
+};
+syncLangA11y(localStorage.getItem('ak-lang')==='gu'?'gu':'en');
