@@ -41,7 +41,7 @@ img{max-width:100%}
 .service-menu{position:relative}
 .service-menu>button{border:0;background:transparent;font-weight:650;cursor:pointer}
 .mega{position:absolute;top:62px;left:50%;transform:translateX(-50%);width:min(760px,92vw);padding:14px;background:#fff;border:1px solid #e2e2e6;border-radius:22px;box-shadow:var(--shadow);display:none;grid-template-columns:1fr 1fr;gap:5px}
-.service-menu:hover .mega,.service-menu:focus-within .mega{display:grid}
+.service-menu:hover .mega,.service-menu:focus-within .mega,.service-menu.open .mega{display:grid}
 .mega a{padding:12px 13px;border-radius:12px;font-size:12px;font-weight:650;display:flex;gap:10px;align-items:flex-start;line-height:1.3}
 .mega a:hover{background:#f5f5f7;color:#0058b0}
 .mega b{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:8px;background:#eef5ff;color:#0066cc;font-size:9px}
@@ -239,3 +239,5 @@ img{max-width:100%}
   .mobile-cta .call{background:#f2f2f4}.mobile-cta .wa{background:#1fa855;color:#fff}
   body{padding-bottom:60px}
 }
+
+@media(max-width:620px){.map-address-link{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-left{min-width:0;overflow:hidden}}
