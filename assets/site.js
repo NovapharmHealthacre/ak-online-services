@@ -1,6 +1,13 @@
 const menuBtn=document.querySelector('.menu-btn'),mobileMenu=document.querySelector('.mobile-menu');
 if(menuBtn){menuBtn.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});}
 document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu?.classList.remove('open');if(menuBtn){menuBtn.textContent='☰';menuBtn.setAttribute('aria-expanded','false');}}));
+const serviceMenu=document.querySelector('.service-menu');
+const serviceToggle=serviceMenu?.querySelector(':scope > button');
+if(serviceMenu&&serviceToggle){
+ serviceToggle.addEventListener('click',e=>{e.preventDefault();const open=serviceMenu.classList.toggle('open');serviceToggle.setAttribute('aria-expanded',String(open));});
+ document.addEventListener('click',e=>{if(!serviceMenu.contains(e.target)){serviceMenu.classList.remove('open');serviceToggle.setAttribute('aria-expanded','false');}});
+ serviceMenu.addEventListener('keydown',e=>{if(e.key==='Escape'){serviceMenu.classList.remove('open');serviceToggle.setAttribute('aria-expanded','false');serviceToggle.focus();}});
+}
 function applyLang(lang){
   const safe=lang==='gu'?'gu':'en';
   document.documentElement.lang=safe;
