@@ -585,3 +585,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .ak-detail-short-link>span[aria-hidden]{color:#0066cc;font-size:14px}
 .ak-detail-short-link:hover{color:#0066cc;text-decoration:underline;text-underline-offset:3px}
 .ak-detail-short-link:focus-visible{outline:3px solid #0066cc;outline-offset:3px}
+
+/* Individual-service enquiry dropdown — preserve native keyboard/typeahead selection. */
+.ak-enquiry-service-hint{display:block;margin-top:2px;font-size:11px;line-height:1.55;color:#727782}
+#enquiryService{cursor:pointer}
+#enquiryService:invalid{color:#727782}
+#enquiryService option,#enquiryService optgroup{color:#1d1d1f}
