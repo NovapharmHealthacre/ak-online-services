@@ -1,64 +1,82 @@
-/* Google review carousel. Never invent or scrape customer reviews.
- * Display only authenticated, attributed entries supplied with publishing rights.
- * Google Maps Platform reviews must be fetched through a compliant integration.
- */
-(async function(){
- const section=document.querySelector('#google-reviews');
- if(!section)return;
- const scroller=document.querySelector('#ak-google-review-scroller');
- const track=document.querySelector('#ak-google-review-track');
- const empty=document.querySelector('#ak-google-review-empty');
- const attribution=document.querySelector('#ak-google-review-attribution');
- if(!scroller||!track||!empty||!attribution)return;
- let payload;
- try {
-   const response=await fetch('/assets/google-reviews.json',{cache:'no-store'});
-   if(!response.ok)return;
-   payload=await response.json();
- }catch(e){return;}
- if(!payload||!Array.isArray(payload.reviews))return;
- const valid=payload.reviews.filter(r=>
-   r&&typeof r.author==='string'&&r.author.trim().length>0&&
-   typeof r.text==='string'&&r.text.trim().length>0&&
-   Number.isFinite(Number(r.rating))&&Number(r.rating)>=1&&Number(r.rating)<=5&&
-   typeof r.reviewUrl==='string'&&/^https:\/\/(?:www\.)?(?:google\.[^/]+|maps\.app\.goo\.gl|share\.google)\//i.test(r.reviewUrl)
- ).slice(0,15);
- if(!valid.length)return;
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- function makeCard(review){
-   const card=document.createElement('article');
-   card.className='ak-gr-card';
-   const stars=document.createElement('div');
-   stars.className='ak-gr-stars';
-   stars.setAttribute('aria-label',Number(review.rating)+' out of 5 stars');
-   stars.textContent='★'.repeat(Math.round(Number(review.rating)))+'☆'.repeat(5-Math.round(Number(review.rating)));
-   const quote=document.createElement('blockquote');
-   quote.textContent=review.text.trim();
-   const who=document.createElement('div');
-   who.className='ak-gr-who';
-   who.textContent=review.author.trim();
-   const meta=document.createElement('div');
-   meta.className='ak-gr-meta';
-   meta.textContent=typeof review.date==='string'?review.date:'Google Maps review';
-   const link=document.createElement('a');
-   link.href=review.reviewUrl;
-   link.target='_blank';
-   link.rel='noopener noreferrer';
-   link.textContent='View on Google ↗';
-   card.append(stars,quote,who,meta,link);
-   return card;
- }
- function makeSet(entries){const set=document.createElement('div');set.className='ak-gr-set';entries.forEach(r=>set.append(makeCard(r)));return set;}
- const set=makeSet(valid);
- track.append(set);
- if(valid.length>=2&&!reduced){
-   const clone=makeSet(valid);clone.setAttribute('aria-hidden','true');
-   clone.querySelectorAll('a').forEach(a=>a.tabIndex=-1);
-   track.append(clone);track.classList.add('is-animated');
- }else {
-   scroller.style.overflowX='auto';
- }
- scroller.hidden=false;
- empty.hidden=true;
- attribution.hidden=false;
+/* Reviews shown here were transcribed from dated screenshots supplied by the business.
+   This is NOT a live Google Places feed. Never invent authors, ratings or permalinks. */
+(async function () {
+  const scroller=document.getElementById('ak-google-review-scroller');
+  const track=document.getElementById('ak-google-review-track');
+  const empty=document.getElementById('ak-google-review-empty');
+  const attribution=document.getElementById('ak-google-review-attribution');
+  if(!scroller||!track||!empty||!attribution)return;
+  const fallbackURL='https://share.google/LYhl4cIHpJTKEJvXz';
+  const safeGoogleURL=(url)=>{
+    try{
+      const u=new URL(url);
+      const host=u.hostname.toLowerCase();
+      return u.protocol==='https:' &&
+        (host==='share.google'||host==='maps.app.goo.gl'||host==='www.google.com'||host==='google.com'||host==='maps.google.com') ? u.href : null;
+    }catch(_){return null;}
+  };
+  let payload;
+  try{
+    const response=await fetch('/assets/google-reviews.json',{cache:'no-store'});
+    if(!response.ok)return;
+    payload=await response.json();
+  }catch(_){return;}
+  if(!payload||!Array.isArray(payload.reviews))return;
+  const profile=safeGoogleURL(payload.sourceUrl)||fallbackURL;
+  const screenshotDate=payload.screenshotDate==='2026-10-15'?'15 Oct 2026':String(payload.screenshotDate||'date not recorded');
+  const entries=payload.reviews.filter(r=>
+    r&&typeof r.author==='string'&&r.author.trim().length>0&&
+    typeof r.text==='string'&&r.text.trim().length>0&&
+    typeof r.rating==='number'&&r.rating>=1&&r.rating<=5
+  ).slice(0,12);
+  if(!entries.length)return;
+  function textEl(tag,className,value){
+    const el=document.createElement(tag);
+    if(className)el.className=className;
+    el.textContent=value;
+    return el;
+  }
+  function cardFor(review){
+    const card=document.createElement('article');
+    card.className='ak-gr-card';
+    const stars=textEl('div','ak-gr-stars','★'.repeat(Math.round(review.rating))+'☆'.repeat(5-Math.round(review.rating)));
+    stars.setAttribute('aria-label',review.rating+' out of 5 stars');
+    const quote=textEl('blockquote','',review.text.trim());
+    if(review.language==='romanized-hi')quote.lang='hi-Latn';
+    const author=textEl('div','ak-gr-who',review.author.trim());
+    const dateText=(typeof review.date==='string'?review.date+' as shown on '+screenshotDate:'From screenshot dated '+screenshotDate);
+    const date=textEl('div','ak-gr-meta',dateText);
+    const translation=review.language==='google-translated-en'?textEl('div','ak-gr-translation','Google-translated excerpt') : null;
+    const link=document.createElement('a');
+    const individualLink=safeGoogleURL(review.reviewUrl);
+    link.href=individualLink||profile;
+    link.textContent=individualLink?'View review on Google ↗':'Explore reviews on Google ↗';
+    link.target='_blank';
+    link.rel='noopener noreferrer';
+    card.append(stars,quote,author,date);
+    if(translation)card.append(translation);
+    card.append(link);
+    return card;
+  }
+  function makeSet(items){
+    const set=document.createElement('div');
+    set.className='ak-gr-set';
+    for(const item of items)set.append(cardFor(item));
+    return set;
+  }
+  track.replaceChildren(makeSet(entries));
+  const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(entries.length>1&&!prefersReduced){
+    const repeated=makeSet(entries);
+    repeated.setAttribute('aria-hidden','true');
+    repeated.querySelectorAll('a').forEach(a=>a.tabIndex=-1);
+    track.append(repeated);
+    track.style.setProperty('--ak-review-duration',Math.max(50,entries.length*7)+'s');
+    track.classList.add('is-animated');
+  } else {
+    scroller.style.overflowX='auto';
+  }
+  scroller.hidden=false;
+  empty.hidden=true;
+  attribution.hidden=false;
 })();
