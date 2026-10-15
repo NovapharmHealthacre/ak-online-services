@@ -27,7 +27,7 @@ if(form){
     const data=new FormData(form);
     const path=String(data.get('service')||'');
     const selected=form.querySelector('#enquiryService')?.selectedOptions?.[0];
-    if(!selected||!/^\\/[a-z0-9-]+\\/$/.test(path))return;
+    if(!selected||!new RegExp('^/[a-z0-9-]+/$').test(path))return;
     const name=String(data.get('name')||'').trim();
     const phone=String(data.get('phone')||'').trim();
     const request=String(data.get('message')||'').trim();
@@ -46,7 +46,7 @@ if(form){
     ];
     // A wa.me link prepares a WhatsApp message; WhatsApp requires the
     // customer to review and press Send. Browser links cannot silently send.
-    const destination='https://wa.me/917383853535?text='+encodeURIComponent(lines.join('\\n'));
+    const destination='https://wa.me/917383853535?text='+encodeURIComponent(lines.join(String.fromCharCode(10)));
     window.open(destination,'_blank','noopener,noreferrer');
   });
 }
