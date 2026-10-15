@@ -1,5 +1,87 @@
 {
-  "source": "Google Maps review profile URL maintained by A K Online Services",
-  "sourceUrl": "https://share.google/Pz7HvHBhs9ErKviqQ",
-  "reviews": []
+  "source": "Owner-provided screenshots of public Google reviews; individual review links not independently verified",
+  "sourceUrl": "https://share.google/LYhl4cIHpJTKEJvXz",
+  "screenshotDate": "2026-10-15",
+  "ratingAtCapture": 5,
+  "totalReviewsAtCapture": 12,
+  "note": "11 review texts are visible across the supplied screenshots. This static file is not a live Google API feed. All 5-star ratings shown are visible in the screenshots; translated excerpts are marked separately.",
+  "reviews": [
+    {
+      "author": "Vicky patel",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "He cleared my year old property card issue with ease. I never throught my property card issue will ever get solved. Everything was legal still since 5 years I was not able get my updated property card. 3 cheers to A K Online Services.",
+      "language": "en"
+    },
+    {
+      "author": "saurabh shah",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "text": "Hi Ajilbhai, I just wanted to send a quick note to say thank you for the excellent job you did on for my driving license renewal. Your attention to detail and professional attitude made the whole process completely stress-free. I really appreciate your hard work!",
+      "language": "en"
+    },
+    {
+      "author": "ratish nair",
+      "rating": 5,
+      "date": "3 weeks ago",
+      "text": "Great service! Needed a domicile certificate for my son, Mr Ajil helped me get it done quickly and without any hassle. Very professional and kept me updated throughout. Highly recommended if you want to save time and running around govt offices.",
+      "language": "en"
+    },
+    {
+      "author": "Vipul Hirajethawala",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "One stop solution. Appreciate Professionalism and transparency in work.",
+      "language": "en"
+    },
+    {
+      "author": "It'z Navin",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "Mera birth certificate may naam ka problem solve karne ke liya dhanyavaad..",
+      "language": "romanized-hi"
+    },
+    {
+      "author": "Vicky Bhatia",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "This was new for me. You can get Cibil score paying samll fees and for year you can download it more than 10 times .. A K online services totally recommended..",
+      "language": "en"
+    },
+    {
+      "author": "Pushkar Ahir",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "Mera LPG cylinder ka KYC karne ke liye aapka dhanyvad A K online service best yaar",
+      "language": "romanized-hi"
+    },
+    {
+      "author": "Vijay Jadhav",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "You explained my income example very well.",
+      "language": "google-translated-en"
+    },
+    {
+      "author": "Gisan Kavil",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "NRI PAN application is now available... thanks to AK ONLINE SERVICE.",
+      "language": "google-translated-en"
+    },
+    {
+      "author": "Minesh Nayak",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "My PAN card name was changed and arrived at home within a week.",
+      "language": "google-translated-en"
+    },
+    {
+      "author": "Mogal Sound",
+      "rating": 5,
+      "date": "a month ago",
+      "text": "Thank you for correcting the flower in my caste example.",
+      "language": "google-translated-en"
+    }
+  ]
 }

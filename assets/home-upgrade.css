@@ -47,7 +47,7 @@
 .ak-gr-empty{background:#f7f9fb;border:1px solid #e5e9ee;border-radius:18px;padding:23px;margin:28px 0 0;color:#525b68;font-size:13px;line-height:1.7}
 .ak-gr-scroller{overflow:hidden;margin-top:32px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
 .ak-gr-track{display:flex;align-items:stretch;gap:18px;width:max-content;max-width:none}
-.ak-gr-track.is-animated{animation:ak-review-scroll 45s linear infinite}
+.ak-gr-track.is-animated{animation:ak-review-scroll var(--ak-review-duration,70s) linear infinite}
 .ak-gr-scroller:hover .ak-gr-track.is-animated,.ak-gr-scroller:focus-within .ak-gr-track.is-animated{animation-play-state:paused}
 .ak-gr-set{display:flex;align-items:stretch;gap:18px}
 .ak-gr-card{width:min(350px,80vw);flex:none;border:1px solid #e0e6ed;border-radius:19px;padding:24px;background:#fafbfd;display:flex;flex-direction:column}
@@ -66,3 +66,15 @@
 
 /* Respect hidden empty/attribution elements despite display rules above. */
 .ak-google-reviews [hidden]{display:none!important}
+
+/* Screenshot-sourced Google reviews: visible dated rating and carousel */
+.ak-gr-rating{display:flex;align-items:center;flex-wrap:wrap;gap:9px 14px;background:#f6f9fc;border:1px solid #e0e7ef;border-radius:18px;padding:18px 22px;margin-top:26px;color:#202c3a}
+.ak-gr-rating>strong{font-size:32px;font-weight:850;letter-spacing:-.05em;line-height:1.2}
+.ak-gr-rating-stars{font-size:24px;letter-spacing:2px;color:#e2a500}
+.ak-gr-rating-count{font-size:14px;font-weight:750}
+.ak-gr-rating-date{margin-left:auto;color:#647080;font-size:11px;line-height:1.5}
+.ak-gr-translation{font-size:11px;color:#657080;margin-top:7px}
+.ak-gr-card{min-height:250px}
+.ak-gr-card blockquote{overflow-wrap:anywhere}
+.ak-gr-card a:focus-visible{outline:3px solid #0066cc;outline-offset:4px}
+@media(max-width:760px){.ak-gr-rating{gap:6px 11px;padding:16px}.ak-gr-rating>strong{font-size:28px}.ak-gr-rating-stars{font-size:21px}.ak-gr-rating-date{flex-basis:100%;margin-left:0}.ak-gr-card{width:min(330px,82vw)}}
