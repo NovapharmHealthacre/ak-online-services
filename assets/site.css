@@ -549,3 +549,33 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .mh-catalogue-link:hover{text-decoration:underline}
 .mh-catalogue-disclaimer{max-width:900px;margin:22px 0 0;font-size:12px;line-height:1.7;color:#6e6e73}
 @media(max-width:620px){.mh-department-catalogue{padding:52px 0}.mh-catalogue-group summary{padding:17px 16px;font-size:14px}.mh-catalogue-group-inner{padding:12px 12px 18px}.mh-catalogue-group summary small{font-size:10px;padding:5px 8px}}
+
+/* AK services card redesign 2026-10-15 */
+.ak-department-index{background:#f7f8fa}
+.ak-dept-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.ak-dept-card{display:flex;min-width:0;flex-direction:column;border-radius:20px;border:1px solid #e3e7ed;background:#fff;overflow:hidden;box-shadow:0 5px 20px rgba(30,49,75,.035);transition:border-color .18s ease,box-shadow .18s ease}
+.ak-dept-card:hover{border-color:#c5d8ec;box-shadow:0 12px 32px rgba(0,61,124,.075)}
+.ak-dept-card-top{padding:20px 22px;border-bottom:1px solid #eef0f4;background:#fafdff}
+.ak-dept-title{display:flex;align-items:center;gap:14px;min-height:42px;text-decoration:none;color:#1d1d1f;border-radius:9px}
+.ak-dept-title:hover strong{text-decoration:underline;text-underline-offset:3px}
+.ak-dept-number{display:grid;flex:none;place-items:center;width:44px;height:44px;border-radius:13px;background:#eaf3ff;color:#0066cc;font-size:13px;font-weight:850}
+.ak-dept-title-text{min-width:0}
+.ak-dept-title-text strong{display:block;font-size:17px;font-weight:800;letter-spacing:-.025em;line-height:1.3}
+.ak-dept-title-text small{display:block;margin-top:5px;font-size:11px;font-weight:600;color:#0066cc}
+.ak-dept-content{padding:17px 22px 23px;flex:1}
+.ak-dept-content-label{display:flex;align-items:center;gap:9px;margin:0 0 10px;color:#687487;font-size:11px;font-weight:750;letter-spacing:.02em}
+.ak-dept-content-label b{display:inline-flex;align-items:center;justify-content:center;background:#edf3fa;color:#005eb8;border-radius:20px;min-width:24px;height:22px;padding:0 6px;font-size:10px}
+.ak-dept-links{list-style:none;display:grid;gap:2px;margin:0;padding:0}
+.ak-dept-links li{margin:0}
+.ak-service-link{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 11px;margin:0 -11px;border-radius:10px;text-decoration:none;color:#272e37;font-size:13px;font-weight:600;line-height:1.5}
+.ak-service-link>span:last-child{font-size:15px;line-height:1;color:#0071e3;opacity:.8;flex:none}
+.ak-service-link:hover{background:#eff6ff;color:#005cb9}
+.ak-service-link:focus-visible,.ak-dept-title:focus-visible{outline:3px solid #0066cc;outline-offset:2px}
+.mh-hero-list .mh-hero-service-link{display:flex;align-items:flex-start;gap:10px;color:#fff;line-height:1.45;text-decoration:none;padding:3px 5px;margin:-3px -5px;border-radius:7px;width:fit-content;max-width:100%}
+.mh-hero-list .mh-hero-service-link:hover{background:rgba(255,255,255,.14);text-decoration:underline;text-underline-offset:4px}
+.mh-hero-list .mh-hero-service-link:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.mh-hero-service-arrow{opacity:.65;font-size:15px;margin-left:2px}
+.mh-detail-row[id]{scroll-margin-top:110px}
+.mh-detail-row:target{outline:2px solid #0066cc;outline-offset:1px;background:#eef6ff}
+@media(max-width:760px){.ak-dept-grid{grid-template-columns:1fr;gap:14px}.ak-dept-card-top{padding:18px}.ak-dept-content{padding:14px 18px 19px}.ak-dept-title-text strong{font-size:16px}}
+@media(max-width:420px){.ak-service-link{font-size:12px;padding:9px 8px}.ak-dept-content{padding:12px 16px 17px}}
