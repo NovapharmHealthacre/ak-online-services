@@ -579,3 +579,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .mh-detail-row:target{outline:2px solid #0066cc;outline-offset:1px;background:#eef6ff}
 @media(max-width:760px){.ak-dept-grid{grid-template-columns:1fr;gap:14px}.ak-dept-card-top{padding:18px}.ak-dept-content{padding:14px 18px 19px}.ak-dept-title-text strong{font-size:16px}}
 @media(max-width:420px){.ak-service-link{font-size:12px;padding:9px 8px}.ak-dept-content{padding:12px 16px 17px}}
+
+/* Short service URLs: link directly from department detail cards */
+.ak-detail-short-link{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none;border-radius:4px}
+.ak-detail-short-link>span[aria-hidden]{color:#0066cc;font-size:14px}
+.ak-detail-short-link:hover{color:#0066cc;text-decoration:underline;text-underline-offset:3px}
+.ak-detail-short-link:focus-visible{outline:3px solid #0066cc;outline-offset:3px}
