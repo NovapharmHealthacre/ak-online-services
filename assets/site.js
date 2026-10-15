@@ -13,13 +13,43 @@ function applyLang(lang){
   document.documentElement.lang=safe;
   document.querySelectorAll('[data-en][data-gu]').forEach(el=>{el.textContent=el.dataset[safe];});
   document.querySelectorAll('[data-placeholder-en][data-placeholder-gu]').forEach(el=>{el.placeholder=el.dataset['placeholder'+(safe==='gu'?'Gu':'En')];});
+  document.querySelectorAll('optgroup[data-label-en][data-label-gu]').forEach(group=>{group.label=group.dataset[safe==='gu'?'labelGu':'labelEn'];});
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===safe));
   localStorage.setItem('ak-lang',safe);
 }
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 applyLang(localStorage.getItem('ak-lang')||'en');
 const form=document.querySelector('#enquiryForm');
-if(form){form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const text='Hello A K Online Services,%0A%0AName: '+encodeURIComponent(d.get('name')||'')+'%0AMobile: '+encodeURIComponent(d.get('phone')||'')+'%0AService: '+encodeURIComponent(d.get('service')||'')+'%0ARequest: '+encodeURIComponent(d.get('message')||'Please contact me about this service.')+'%0A%0ASent from akonlineservices.in';window.open('https://wa.me/917383853535?text='+text,'_blank','noopener');});}
+if(form){
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!form.reportValidity())return;
+    const data=new FormData(form);
+    const path=String(data.get('service')||'');
+    const selected=form.querySelector('#enquiryService')?.selectedOptions?.[0];
+    if(!selected||!/^\\/[a-z0-9-]+\\/$/.test(path))return;
+    const name=String(data.get('name')||'').trim();
+    const phone=String(data.get('phone')||'').trim();
+    const request=String(data.get('message')||'').trim();
+    const serviceName=selected.dataset.en||selected.textContent.trim();
+    const lines=[
+      'Hello A K Online Services,',
+      '',
+      'I would like help with the following service:',
+      'Name: '+name,
+      ...(phone?['Mobile: '+phone]:[]),
+      'Service: '+serviceName,
+      'Service page: https://www.akonlineservices.in'+path,
+      'Request: '+(request||'Please contact me about this service.'),
+      '',
+      'Enquiry prepared on akonlineservices.in'
+    ];
+    // A wa.me link prepares a WhatsApp message; WhatsApp requires the
+    // customer to review and press Send. Browser links cannot silently send.
+    const destination='https://wa.me/917383853535?text='+encodeURIComponent(lines.join('\\n'));
+    window.open(destination,'_blank','noopener,noreferrer');
+  });
+}
 function syncLangA11y(lang){
   document.querySelectorAll('.lang-btn').forEach(btn=>{
     const active=btn.dataset.lang===lang;
