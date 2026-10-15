@@ -1,0 +1,68 @@
+
+/* Digital India and Google reviews homepage — 2026-10-15 */
+.ak-digital-india{padding:88px 0 70px;background:linear-gradient(180deg,#f7f9fc,#fff);color:#1d1d1f}
+.ak-di-kicker{color:#0066cc;font-size:12px;font-weight:850;letter-spacing:.11em;text-transform:uppercase;margin:0 0 14px}
+.ak-di-intro{max-width:920px;margin:0 0 36px}
+.ak-di-intro h2{font-size:clamp(36px,5vw,66px);letter-spacing:-.055em;line-height:1.08;margin:0 0 22px}
+.ak-di-lead{max-width:880px;font-size:16px;line-height:1.85;color:#535966;margin:0}
+.ak-di-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ak-di-primary-panel,.ak-di-steps{border:1px solid #dee5ee;border-radius:26px;padding:32px;background:#fff}
+.ak-di-primary-panel{background:linear-gradient(125deg,#074a9b,#0066cc 70%,#539fe6);color:#fff;border-color:transparent;display:flex;flex-direction:column}
+.ak-di-panel-label{display:block;color:#0066cc;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.11em;margin:0 0 15px}
+.ak-di-primary-panel .ak-di-panel-label{color:#c8e3ff}
+.ak-di-primary-panel h3,.ak-di-steps h3{font-size:clamp(24px,3vw,34px);line-height:1.15;letter-spacing:-.04em;margin:0 0 14px}
+.ak-di-primary-panel p,.ak-di-steps p{font-size:14px;line-height:1.8;margin:0;color:inherit}
+.ak-di-primary-panel p{color:rgba(255,255,255,.86)}
+.ak-di-panel-foot{margin:auto 0 0;padding-top:32px;font-size:11px;color:#d3e8ff;line-height:1.65}
+.ak-di-steps ol{list-style:none;counter-reset:aksteps;padding:0;margin:16px 0 0;display:grid;gap:13px}
+.ak-di-steps li{counter-increment:aksteps;display:flex;align-items:start;gap:12px;color:#535966;font-size:13px;line-height:1.65}
+.ak-di-steps li:before{content:counter(aksteps,decimal-leading-zero);display:grid;place-items:center;width:30px;height:30px;flex:none;background:#e9f3ff;color:#0066cc;font-size:10px;font-weight:850;border-radius:9px}
+.ak-di-audience-head{margin:60px 0 22px}
+.ak-di-audience-head h3,.ak-di-scope-row h3{font-size:clamp(26px,3.2vw,38px);line-height:1.15;letter-spacing:-.045em;margin:0}
+.ak-di-audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.ak-di-audience{padding:24px;background:#f8fafc;border:1px solid #e5e9ef;border-radius:18px}
+.ak-di-audience-num{color:#0066cc;font-size:12px;font-weight:850}
+.ak-di-audience h3{margin:13px 0 8px;font-size:17px;letter-spacing:-.025em}
+.ak-di-audience p{color:#596271;font-size:12px;line-height:1.75;margin:0}
+.ak-di-scope-row{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin:62px 0}
+.ak-di-scope-row>div:first-child p{color:#535966;font-size:14px;line-height:1.8}
+.ak-di-text-link{color:#0066cc;text-decoration:none;font-size:14px;font-weight:800}
+.ak-di-text-link:hover{text-decoration:underline;text-underline-offset:3px}
+.ak-di-benefits{display:grid;align-content:start;gap:18px}
+.ak-di-benefit{display:flex;align-items:start;gap:13px}
+.ak-di-benefit-check{display:grid;place-items:center;border-radius:999px;color:#0066cc;background:#e9f3ff;width:28px;height:28px;flex:none}
+.ak-di-benefit strong{display:block;font-size:14px;color:#1d1d1f}
+.ak-di-benefit p{font-size:12px;margin:5px 0 0;color:#596271;line-height:1.7}
+.ak-di-promise{padding:32px;display:flex;align-items:center;justify-content:space-between;gap:30px;background:#eef5fc;border:1px solid #d5e6f7;border-radius:24px}
+.ak-di-promise h3{margin:0 0 9px;font-size:28px;letter-spacing:-.04em}
+.ak-di-promise p{max-width:600px;font-size:13px;line-height:1.7;color:#596271;margin:0}
+.ak-di-actions{display:flex;gap:10px;flex-wrap:wrap}
+.ak-di-call{color:#005bb5;border-color:#a9ccec}
+.ak-di-disclaimer{border-top:1px solid #e6e8eb;padding:19px 0 0;margin:24px 0 0;color:#6a717a;font-size:11px;line-height:1.7}
+.ak-google-reviews{padding:74px 0;background:#fff;border-top:1px solid #edf0f4}
+.ak-gr-head{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.ak-gr-head h2{font-size:clamp(32px,4vw,50px);letter-spacing:-.05em;line-height:1.14;margin:0 0 12px}
+.ak-gr-head p{max-width:700px;font-size:14px;line-height:1.7;color:#656b74;margin:0}
+.ak-gr-head>.mh-btn{flex:none}
+.ak-gr-empty{background:#f7f9fb;border:1px solid #e5e9ee;border-radius:18px;padding:23px;margin:28px 0 0;color:#525b68;font-size:13px;line-height:1.7}
+.ak-gr-scroller{overflow:hidden;margin-top:32px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.ak-gr-track{display:flex;align-items:stretch;gap:18px;width:max-content;max-width:none}
+.ak-gr-track.is-animated{animation:ak-review-scroll 45s linear infinite}
+.ak-gr-scroller:hover .ak-gr-track.is-animated,.ak-gr-scroller:focus-within .ak-gr-track.is-animated{animation-play-state:paused}
+.ak-gr-set{display:flex;align-items:stretch;gap:18px}
+.ak-gr-card{width:min(350px,80vw);flex:none;border:1px solid #e0e6ed;border-radius:19px;padding:24px;background:#fafbfd;display:flex;flex-direction:column}
+.ak-gr-card .ak-gr-stars{color:#cc8900;letter-spacing:.04em;font-size:19px;margin-bottom:10px}
+.ak-gr-card blockquote{font-size:14px;color:#303a45;line-height:1.8;margin:0 0 20px;flex:1}
+.ak-gr-card .ak-gr-who{font-size:12px;font-weight:750;color:#283643}
+.ak-gr-card .ak-gr-meta{font-size:11px;color:#69717c;margin-top:5px}
+.ak-gr-card a{color:#0066cc;font-size:12px;font-weight:750;margin-top:12px;text-decoration:none}
+.ak-gr-card a:hover{text-decoration:underline}
+.ak-gr-attribution{font-size:11px;color:#67727f;margin-top:17px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.ak-gr-attribution a{color:#0066cc}
+@keyframes ak-review-scroll{to{transform:translateX(calc(-50% - 9px))}}
+@media(max-width:920px){.ak-di-audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ak-di-feature-grid,.ak-di-scope-row{grid-template-columns:1fr}.ak-di-scope-row{gap:28px}}
+@media(max-width:760px){.ak-digital-india{padding:60px 0}.ak-di-feature-grid{gap:12px}.ak-di-primary-panel,.ak-di-steps{padding:25px}.ak-di-audience-grid{grid-template-columns:1fr}.ak-di-audience-head{margin-top:42px}.ak-di-scope-row{margin:43px 0}.ak-di-promise{padding:25px;display:block}.ak-di-actions{margin-top:20px}.ak-di-actions .mh-btn{width:100%}.ak-google-reviews{padding:55px 0}.ak-gr-head{display:block}.ak-gr-head>.mh-btn{margin-top:20px}.ak-gr-scroller{mask-image:none}}
+@media(prefers-reduced-motion:reduce){.ak-gr-track.is-animated{animation:none}.ak-gr-scroller{overflow-x:auto;mask-image:none}}
+
+/* Respect hidden empty/attribution elements despite display rules above. */
+.ak-google-reviews [hidden]{display:none!important}
