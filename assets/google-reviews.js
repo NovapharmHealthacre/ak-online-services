@@ -44,18 +44,25 @@
     const quote=textEl('blockquote','',review.text.trim());
     if(review.language==='romanized-hi')quote.lang='hi-Latn';
     const author=textEl('div','ak-gr-who',review.author.trim());
-    const dateText=(typeof review.date==='string'?review.date+' as shown on '+screenshotDate:'From screenshot dated '+screenshotDate);
+    const dateText=(typeof review.date==='string'?review.date+' · shown on '+screenshotDate:'Screenshot dated '+screenshotDate);
     const date=textEl('div','ak-gr-meta',dateText);
+    const dateGu='Google પર દર્શાવેલ સમય: '+(review.date||'')+' · સ્ક્રીનશૉટ '+screenshotDate;
+    date.dataset.en=dateText;
+    date.dataset.gu=dateGu;
     const translation=review.language==='google-translated-en'?textEl('div','ak-gr-translation','Google-translated excerpt') : null;
+    if(translation){translation.dataset.en='Google-translated excerpt';translation.dataset.gu='Google દ્વારા અનુવાદિત રિવ્યૂ';}
     const link=document.createElement('a');
     const individualLink=safeGoogleURL(review.reviewUrl);
     link.href=individualLink||profile;
-    link.textContent=individualLink?'View review on Google ↗':'Explore reviews on Google ↗';
+    link.dataset.en=individualLink?'View review on Google ↗':'Explore reviews on Google ↗';
+    link.dataset.gu=individualLink?'Google પર રિવ્યૂ જુઓ ↗':'Google પર બધા રિવ્યૂ જુઓ ↗';
+    link.textContent=localStorage.getItem('ak-lang')==='gu'?link.dataset.gu:link.dataset.en;
     link.target='_blank';
     link.rel='noopener noreferrer';
     card.append(stars,quote,author,date);
     if(translation)card.append(translation);
     card.append(link);
+    if(localStorage.getItem('ak-lang')==='gu'){date.textContent=date.dataset.gu;if(translation)translation.textContent=translation.dataset.gu;}
     return card;
   }
   function makeSet(items){
