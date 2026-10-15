@@ -63,3 +63,6 @@
 @media(max-width:920px){.ak-di-audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ak-di-feature-grid,.ak-di-scope-row{grid-template-columns:1fr}.ak-di-scope-row{gap:28px}}
 @media(max-width:760px){.ak-digital-india{padding:60px 0}.ak-di-feature-grid{gap:12px}.ak-di-primary-panel,.ak-di-steps{padding:25px}.ak-di-audience-grid{grid-template-columns:1fr}.ak-di-audience-head{margin-top:42px}.ak-di-scope-row{margin:43px 0}.ak-di-promise{padding:25px;display:block}.ak-di-actions{margin-top:20px}.ak-di-actions .mh-btn{width:100%}.ak-google-reviews{padding:55px 0}.ak-gr-head{display:block}.ak-gr-head>.mh-btn{margin-top:20px}.ak-gr-scroller{mask-image:none}}
 @media(prefers-reduced-motion:reduce){.ak-gr-track.is-animated{animation:none}.ak-gr-scroller{overflow-x:auto;mask-image:none}}
+
+/* Respect hidden empty/attribution elements despite display rules above. */
+.ak-google-reviews [hidden]{display:none!important}
